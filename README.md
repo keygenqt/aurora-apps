@@ -1,4 +1,4 @@
-# Aurora OS applications
+# Aurora Apps
 
 ### Subscribe and like!
 
