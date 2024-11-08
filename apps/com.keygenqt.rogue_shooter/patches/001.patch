@@ -1,0 +1,357 @@
+Subject: [PATCH] 001
+---
+Index: examples/games/rogue_shooter/aurora/CMakeLists.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/examples/games/rogue_shooter/aurora/CMakeLists.txt b/examples/games/rogue_shooter/aurora/CMakeLists.txt
+new file mode 100644
+--- /dev/null	(revision be5e7f2c7cdaec9d04851a9e108ed92ecd7adde7)
++++ b/examples/games/rogue_shooter/aurora/CMakeLists.txt	(revision be5e7f2c7cdaec9d04851a9e108ed92ecd7adde7)
+@@ -0,0 +1,52 @@
++# CMAKE_SYSTEM_PROCESSOR - CPU architecture name (armv7l, aarch64, x86_64)
++# CMAKE_BUILD_TYPE       - Build mode (debug, profile, release)
++# PSDK_VERSION           - Build psdk exact version
++# PSDK_MAJOR             - Build psdk major version
++
++cmake_minimum_required(VERSION 3.10)
++project(com.keygenqt.rogue_shooter LANGUAGES CXX)
++
++include(GNUInstallDirs)
++
++set(BINARY_NAME ${CMAKE_PROJECT_NAME})
++set(FLUTTER_DIR ${CMAKE_CURRENT_SOURCE_DIR}/flutter)
++
++set(CMAKE_CXX_STANDARD 17)
++set(CMAKE_CXX_STANDARD_REQUIRED ON)
++
++set(CMAKE_CXX_FLAGS "-Wall -Wextra")
++set(CMAKE_CXX_FLAGS_RELEASE "-O3")
++
++set(CMAKE_SKIP_RPATH OFF)
++set(CMAKE_INSTALL_RPATH "\$ORIGIN/../share/${BINARY_NAME}/lib")
++
++find_package(PkgConfig REQUIRED)
++pkg_check_modules(FlutterEmbedder REQUIRED IMPORTED_TARGET flutter-embedder)
++
++add_executable(${BINARY_NAME} main.cpp ${FLUTTER_DIR}/generated_plugin_registrant.cpp)
++target_link_libraries(${BINARY_NAME} PRIVATE PkgConfig::FlutterEmbedder)
++target_include_directories(${BINARY_NAME} PRIVATE ${FLUTTER_DIR})
++
++include(flutter/generated_plugins.cmake)
++
++set(PACKAGE_INSTALL_DIR    ${CMAKE_INSTALL_DATADIR}/${BINARY_NAME})
++set(DESKTOP_INSTALL_DIR    ${CMAKE_INSTALL_DATADIR}/applications)
++set(ICONS_INSTALL_ROOT_DIR ${CMAKE_INSTALL_DATADIR}/icons/hicolor)
++
++add_custom_command(TARGET ${BINARY_NAME} POST_BUILD
++                   COMMAND ${CMAKE_COMMAND} -E copy
++                   ${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}/libflutter-embedder.so
++                   ${PROJECT_BINARY_DIR}/bundle/lib/libflutter-embedder.so)
++
++install(FILES     ${PROJECT_BINARY_DIR}/bundle/icudtl.dat     DESTINATION ${PACKAGE_INSTALL_DIR})
++install(DIRECTORY ${PROJECT_BINARY_DIR}/bundle/flutter_assets DESTINATION ${PACKAGE_INSTALL_DIR})
++install(DIRECTORY ${PROJECT_BINARY_DIR}/bundle/lib            DESTINATION ${PACKAGE_INSTALL_DIR})
++
++install(TARGETS ${BINARY_NAME} RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
++install(FILES desktop/${BINARY_NAME}.desktop DESTINATION ${DESKTOP_INSTALL_DIR})
++
++foreach(ICONS_SIZE 86x86 108x108 128x128 172x172)
++    install(FILES icons/${ICONS_SIZE}.png
++            RENAME ${BINARY_NAME}.png
++            DESTINATION ${ICONS_INSTALL_ROOT_DIR}/${ICONS_SIZE}/apps/)
++endforeach(ICONS_SIZE)
+Index: examples/games/rogue_shooter/aurora/desktop/com.keygenqt.rogue_shooter.desktop
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/examples/games/rogue_shooter/aurora/desktop/com.keygenqt.rogue_shooter.desktop b/examples/games/rogue_shooter/aurora/desktop/com.keygenqt.rogue_shooter.desktop
+new file mode 100644
+--- /dev/null	(revision be5e7f2c7cdaec9d04851a9e108ed92ecd7adde7)
++++ b/examples/games/rogue_shooter/aurora/desktop/com.keygenqt.rogue_shooter.desktop	(revision be5e7f2c7cdaec9d04851a9e108ed92ecd7adde7)
+@@ -0,0 +1,12 @@
++[Desktop Entry]
++Type=Application
++Name=Rogue Shooter
++Comment=This is a simple scrolling shooter game which we use for testing the performance of Flame.
++Icon=com.keygenqt.rogue_shooter
++Exec=/usr/bin/com.keygenqt.rogue_shooter
++X-Nemo-Application-Type=silica-qt5
++
++[X-Application]
++Permissions=
++OrganizationName=com.keygenqt
++ApplicationName=rogue_shooter
+Index: examples/games/rogue_shooter/aurora/main.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/examples/games/rogue_shooter/aurora/main.cpp b/examples/games/rogue_shooter/aurora/main.cpp
+new file mode 100644
+--- /dev/null	(revision be5e7f2c7cdaec9d04851a9e108ed92ecd7adde7)
++++ b/examples/games/rogue_shooter/aurora/main.cpp	(revision be5e7f2c7cdaec9d04851a9e108ed92ecd7adde7)
+@@ -0,0 +1,9 @@
++#include <flutter/flutter_aurora.h>
++#include "generated_plugin_registrant.h"
++
++int main(int argc, char *argv[]) {
++    aurora::Initialize(argc, argv);
++    aurora::RegisterPlugins();
++    aurora::Launch();
++    return 0;
++}
+Index: examples/games/rogue_shooter/aurora/rpm/com.keygenqt.rogue_shooter.spec
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/examples/games/rogue_shooter/aurora/rpm/com.keygenqt.rogue_shooter.spec b/examples/games/rogue_shooter/aurora/rpm/com.keygenqt.rogue_shooter.spec
+new file mode 100644
+--- /dev/null	(revision be5e7f2c7cdaec9d04851a9e108ed92ecd7adde7)
++++ b/examples/games/rogue_shooter/aurora/rpm/com.keygenqt.rogue_shooter.spec	(revision be5e7f2c7cdaec9d04851a9e108ed92ecd7adde7)
+@@ -0,0 +1,31 @@
++%global __provides_exclude_from ^%{_datadir}/%{name}/lib/.*$
++%global __requires_exclude ^lib(dconf|flutter-embedder|maliit-glib|.+_platform_plugin)\\.so.*$
++
++Name: com.keygenqt.rogue_shooter
++Summary: This is a simple scrolling shooter game which we use for testing the performance of Flame.
++Version: 0.1.0
++Release: 1
++License: Proprietary
++Source0: %{name}-%{version}.tar.zst
++
++BuildRequires: cmake
++BuildRequires: ninja
++
++%description
++%{summary}.
++
++%prep
++%autosetup
++
++%build
++%cmake -GNinja -DCMAKE_BUILD_TYPE=%{_flutter_build_type} -DPSDK_VERSION=%{_flutter_psdk_version} -DPSDK_MAJOR=%{_flutter_psdk_major}
++%ninja_build
++
++%install
++%ninja_install
++
++%files
++%{_bindir}/%{name}
++%{_datadir}/%{name}/*
++%{_datadir}/applications/%{name}.desktop
++%{_datadir}/icons/hicolor/*/apps/%{name}.png
+diff --git a/examples/games/rogue_shooter/aurora/icons/108x108.png b/examples/games/rogue_shooter/aurora/icons/108x108.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..44ba42babf758159c2810f1a5d544d92f55eab69
+GIT binary patch
+literal 4958
+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
+
+diff --git a/examples/games/rogue_shooter/aurora/icons/128x128.png b/examples/games/rogue_shooter/aurora/icons/128x128.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..0a35d8f596ce4db25dc5df2cfb4aef674663d867
+GIT binary patch
+literal 5048
+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
+
+diff --git a/examples/games/rogue_shooter/aurora/icons/172x172.png b/examples/games/rogue_shooter/aurora/icons/172x172.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..2962c7291a6cabc918653efcbba4cad6ed0cb14b
+GIT binary patch
+literal 5225
+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
+
+diff --git a/examples/games/rogue_shooter/aurora/icons/86x86.png b/examples/games/rogue_shooter/aurora/icons/86x86.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..a834fe3ad87beb7754548964cf07cc18857b5416
+GIT binary patch
+literal 4891
+zc%1E6dsGu=77y~0D1w4TD%2QpK_JQG1xZTeZFnk#fFOuWCKDLUi)0`HMJ38<m94d|
+zV4<MU)%5`?uUZ5V5h&FbpIF2q;u9Z0MHf^kx|4tkyFJ~%_MH8L$(hXk?!Djd-uwIR
+z_nl0(hppt9<3GmZa5(e806#wVjMCjRO|b9CDDWlrXwDEsqkK?JP$=bML;@4gbOlU+
+zHHa98)7+GXdCzGg%&vQ}gPXMrcZZGk9~euxw0|*jJ?gt{W^S~_;Ap1j9p<h8?fs(%
+zbLSZ#SNXh>E0-N3_MEpmRl{4&wOgTWzR|h!38$Z9Z*VeI@Y?!-+&!=KO7n}MkM3Ix
+zK5{CF<{nPBbfo`iSexmR_m839v*Dc8hmQfDKmB>R&p_glue%EtD}xqV@c>nYiN@8e
+z3$$ca-X$(beVAOU)@FIMA-q?HukkUYDv9;aIGn*Y#Md`0(AW1}Jy;cmnO|`On!M~<
+z*2M<rMA`Kb?(Qn##8}QxDT{RS$qsX=ev+VkY{NhT_;Gf|9onsnaw1J_64%<t8GAo7
+zZ0>9fyy749`#OHo+<T2Fp53=Lbk!UF-sT+9w$G?IIq$2$rP*<tB4^frYXKTj4fZ#O
+zWUjQn_RMbG%V&c_<cn3OFO9KBa<%7i`@ISiYQed3%S)0qoZig4PA<XtLH1ycw~fQ5
+z`?Y<~7xwOM+O*G>S(%@H*Qp}xiSSfTOlR2kL))PpN5ju}_Ew%t&#78-tZJD1de#zS
+zDV+b5!P|9?m`Cv0@>h=Y;d4HPQD0bF+1^~0@#-`Ch5&MY+<ZXkT5K|Z_dV0MTW{Yg
+zXgLz-zHGOVmU428ir<!&71eaI;Y(><>I|cOSuV%!onU5luDZI=o|I-ZTViO_VISIU
+zNLFttaa>Dt;NdU-(<bNasBLD%Cksv+XLNLR-yCIS;wsxCM@(2OqaT9y)DH{}DAe+|
+z`;eC}4Fw^}0&}$NB-VEt1naNp&=3wJmy$t|TnLjjQUy+Td3b6RAhaGv2|_p#k#UK?
+z)in?ah=@yE%?t%X6~1s15|E*UBQjPBpp5kpTSW9+j`z@TFaRlxf&`6JB2#fRT%sPA
+zgULEIg-Fo5pzFEB=+H2NuUrWe7-R++Ao**MG#YU^p5UPri8*|~6%!EHh)YaDQ3Z!W
+zQLEKtHJvP1CQ_(uHk$&_C^Q-g^B}3xWhkg2$y7^p5aSqrunJNl3KWsc2)Z#Sl&7Lx
+zA`!C_-sLA%goeI{m#HRL!1$nOKm~<L1}IV~W%3La>Ys-G`3#i++olvgtdgfHA=p0+
+zmZ3`~Lx`aF^A)K|iM|{WM1du+6mwN!7}O~td4Zu}Qz%G8qze5kEd42-C?XdBac(+`
+zKDmFZ{?9AXJL@^(_{pJEU3!6jT%s;MM<j<35l1hwg)}!Y4FE|jDw{@P(1c<Vn<`|G
+zgkma<4l+b^cLr+`RG>_Sf-(r!L17v)g5dx{Is{VP01_1d+(-<nJ49lOg%C*$y0L{~
+zAqxgrz$A!ON(AdlP%=3y9h3-zV!FApSxgp{#D-xOmJP%r37K>e2@)}=Vv(4Q4M07V
+z2;!`eE2SW|oQM=mgeeMHqTZk*oZ}r9$R*Oqzz0p31VqKy1THZIk)>)r7zBtEjzB>j
+zn^bo?6<{zKbQ%L-1Jp^gqhO^9>qH$U6(G~y^cLN+=!(Hg08zb_`mRcjuM!4Pxl$mP
+zOSnWG1VK0Ry*U)yP9hKm{Xi7PKmi(qL#1*6mH=RJnC_VD0?;|YB!9UG5vTt*Z{6l0
+zc#M-AfT*ze>3Y@pj*5U&#z*5r2{Jw)=r;uigvLuyfoZUaIK>1dfwDvxJ3S~<^~fKz
+z0t7H%0D^@iIxL1r3^7Q<8i__Hv1kl;H!(zq>2%>#6qQ_zszD{}orv*>afS7yo-2Zr
+zexa64^;RdrvT+JXR4VBM1+)nYC=&%!CRgl1`43LU9VQ(zy0eQiad=^8A?5vHIKkQf
+z_?iwf9b`Jlbdc#F(?O<#{9gsZe|VjOW!SGEHTJR;&`=qVy=a*TgL!_qx4KVp{h_~M
+z8Z$*ej0%UFWu?0fa0P`6Fr_IP80v5OXx2<)_U!EVWk2C?Gnxbayak$@{RIudcHVX^
+zxBrrJ<CR5HdF>wF<@k$6l783bY>DNk(sOGQ^9LN-4q7#y^}*LwYn>ij-48m!Y2SSI
+zq2&X98$chp)n7C)u(AGS0{C#)v~E%Nnb#M)OmHK`@p1Ccw<MV55u>$Bqjz9J!ZJ+I
+z9-Nt%VCE*jo}AjAoT@EK%jS2j*<Mh)IVHub^=ic@wSx0#Y3FcfJ=(`$|I#MFu|`I$
+zaOGoTRWmzwD9W@?PO>#A+Mdsx!>#JmR?8ckPIcRO6vmErMJN2Qvt(0Ea^r&@W=TfB
+z%(<(qm4^SiqUFg*B|P-~nT;XRL-xVts4H{(49zRs-eGW2(SefD-<J28Zya+8x8i+j
+z(73bUg7dDb>;7XK9Fe4&j=iMPwEpkvKCWIB5xb&seOlS$c1By2O)BGXOlNuWIn&;&
+z6-F+>-N)zGZ0#6)F2{Kl_MGqWFSkvM%RP+b#^R4Ax0;nHfAYu+KkM{k12OExu&Su{
+z+PeE-z85cd)xDs#t)^$ePI4Q5=uMh24xqnvwCbt6Lxa|Bg?ROEwu<8~9FuLhkq)=|
+zJbLj|el&B)0vDFqz(^a&GjMmEmmJe_`e`?@hX$$m1EsMsT_gSd1=qiPdpvfmzK&jc
+zyI@o_)Ru3H>+{?<r^s2od&R(U^A}p=qkeLGIH5In!<)h9H@z<V!?FR}(&7SOttDcy
+zcc|)BwF+uC)pl?8AUQnEui%%?cp$iTFunJi4Vl*(FVs_id630i6v7qc=Mdp8i@$p%
+zpJE<ax!d^Go0J-)|JPfu5B|FFih1K1Bhl(JTG%=u-bHgf*!|mY95ZkGx6+^oHIX5a
+z1S;N-6E#C5?yHV8ZgN<R_sfgrx9_bka+pONhzPNEY7JWUJxdd+I<+($b#0vI>R)aY
+oTyBjCjeJZn3Z6TzY<c8aJp9ER8~e*8y8j#k{a5-O_es$H3tKcjY5)KL
+

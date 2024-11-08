@@ -1,0 +1,36 @@
+Subject: [PATCH] 001
+---
+Index: aurora/rpm/com.queenstech.todo.spec
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/aurora/rpm/com.queenstech.todo.spec b/aurora/rpm/com.queenstech.todo.spec
+--- a/aurora/rpm/com.queenstech.todo.spec	(revision f2cf650bae0e03bca5973f6d84e66ec88dc5724e)
++++ b/aurora/rpm/com.queenstech.todo.spec	(revision 4430fdd54741c45bbb62670ca6bbe03609c849df)
+@@ -3,7 +3,7 @@
+ 
+ Name: com.queenstech.todo
+ Summary: Todo - Simple & Beautiful.
+-Version: 0.1.0
++Version: 1.1.4
+ Release: 1
+ License: MIT
+ Source0: %{name}-%{version}.tar.zst
+Index: pubspec.yaml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pubspec.yaml b/pubspec.yaml
+--- a/pubspec.yaml	(revision f2cf650bae0e03bca5973f6d84e66ec88dc5724e)
++++ b/pubspec.yaml	(revision 4430fdd54741c45bbb62670ca6bbe03609c849df)
+@@ -14,7 +14,7 @@
+ # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+ # Read more about iOS versioning at
+ # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+-version: 1.1.3
++version: 1.1.4
+ 
+ environment:
+   sdk: '>=3.2.2 <4.0.0'

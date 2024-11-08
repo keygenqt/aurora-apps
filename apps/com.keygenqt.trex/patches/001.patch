@@ -1,0 +1,353 @@
+Subject: [PATCH] 001
+---
+Index: examples/games/trex/aurora/CMakeLists.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/examples/games/trex/aurora/CMakeLists.txt b/examples/games/trex/aurora/CMakeLists.txt
+new file mode 100644
+--- /dev/null	(revision 0d83673913254a81de40d49f507b1c01f4bbd1cc)
++++ b/examples/games/trex/aurora/CMakeLists.txt	(revision 0d83673913254a81de40d49f507b1c01f4bbd1cc)
+@@ -0,0 +1,52 @@
++# CMAKE_SYSTEM_PROCESSOR - CPU architecture name (armv7l, aarch64, x86_64)
++# CMAKE_BUILD_TYPE       - Build mode (debug, profile, release)
++# PSDK_VERSION           - Build psdk exact version
++# PSDK_MAJOR             - Build psdk major version
++
++cmake_minimum_required(VERSION 3.10)
++project(com.keygenqt.trex LANGUAGES CXX)
++
++include(GNUInstallDirs)
++
++set(BINARY_NAME ${CMAKE_PROJECT_NAME})
++set(FLUTTER_DIR ${CMAKE_CURRENT_SOURCE_DIR}/flutter)
++
++set(CMAKE_CXX_STANDARD 17)
++set(CMAKE_CXX_STANDARD_REQUIRED ON)
++
++set(CMAKE_CXX_FLAGS "-Wall -Wextra")
++set(CMAKE_CXX_FLAGS_RELEASE "-O3")
++
++set(CMAKE_SKIP_RPATH OFF)
++set(CMAKE_INSTALL_RPATH "\$ORIGIN/../share/${BINARY_NAME}/lib")
++
++find_package(PkgConfig REQUIRED)
++pkg_check_modules(FlutterEmbedder REQUIRED IMPORTED_TARGET flutter-embedder)
++
++add_executable(${BINARY_NAME} main.cpp ${FLUTTER_DIR}/generated_plugin_registrant.cpp)
++target_link_libraries(${BINARY_NAME} PRIVATE PkgConfig::FlutterEmbedder)
++target_include_directories(${BINARY_NAME} PRIVATE ${FLUTTER_DIR})
++
++include(flutter/generated_plugins.cmake)
++
++set(PACKAGE_INSTALL_DIR    ${CMAKE_INSTALL_DATADIR}/${BINARY_NAME})
++set(DESKTOP_INSTALL_DIR    ${CMAKE_INSTALL_DATADIR}/applications)
++set(ICONS_INSTALL_ROOT_DIR ${CMAKE_INSTALL_DATADIR}/icons/hicolor)
++
++add_custom_command(TARGET ${BINARY_NAME} POST_BUILD
++                   COMMAND ${CMAKE_COMMAND} -E copy
++                   ${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}/libflutter-embedder.so
++                   ${PROJECT_BINARY_DIR}/bundle/lib/libflutter-embedder.so)
++
++install(FILES     ${PROJECT_BINARY_DIR}/bundle/icudtl.dat     DESTINATION ${PACKAGE_INSTALL_DIR})
++install(DIRECTORY ${PROJECT_BINARY_DIR}/bundle/flutter_assets DESTINATION ${PACKAGE_INSTALL_DIR})
++install(DIRECTORY ${PROJECT_BINARY_DIR}/bundle/lib            DESTINATION ${PACKAGE_INSTALL_DIR})
++
++install(TARGETS ${BINARY_NAME} RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
++install(FILES desktop/${BINARY_NAME}.desktop DESTINATION ${DESKTOP_INSTALL_DIR})
++
++foreach(ICONS_SIZE 86x86 108x108 128x128 172x172)
++    install(FILES icons/${ICONS_SIZE}.png
++            RENAME ${BINARY_NAME}.png
++            DESTINATION ${ICONS_INSTALL_ROOT_DIR}/${ICONS_SIZE}/apps/)
++endforeach(ICONS_SIZE)
+Index: examples/games/trex/aurora/desktop/com.keygenqt.trex.desktop
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/examples/games/trex/aurora/desktop/com.keygenqt.trex.desktop b/examples/games/trex/aurora/desktop/com.keygenqt.trex.desktop
+new file mode 100644
+--- /dev/null	(revision 0d83673913254a81de40d49f507b1c01f4bbd1cc)
++++ b/examples/games/trex/aurora/desktop/com.keygenqt.trex.desktop	(revision 0d83673913254a81de40d49f507b1c01f4bbd1cc)
+@@ -0,0 +1,12 @@
++[Desktop Entry]
++Type=Application
++Name=Trex
++Comment=A clone of the classic browser T-Rex game.
++Icon=com.keygenqt.trex
++Exec=/usr/bin/com.keygenqt.trex
++X-Nemo-Application-Type=silica-qt5
++
++[X-Application]
++Permissions=
++OrganizationName=com.keygenqt
++ApplicationName=trex
+Index: examples/games/trex/aurora/main.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/examples/games/trex/aurora/main.cpp b/examples/games/trex/aurora/main.cpp
+new file mode 100644
+--- /dev/null	(revision 0d83673913254a81de40d49f507b1c01f4bbd1cc)
++++ b/examples/games/trex/aurora/main.cpp	(revision 0d83673913254a81de40d49f507b1c01f4bbd1cc)
+@@ -0,0 +1,9 @@
++#include <flutter/flutter_aurora.h>
++#include "generated_plugin_registrant.h"
++
++int main(int argc, char *argv[]) {
++    aurora::Initialize(argc, argv);
++    aurora::RegisterPlugins();
++    aurora::Launch();
++    return 0;
++}
+Index: examples/games/trex/aurora/rpm/com.keygenqt.trex.spec
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/examples/games/trex/aurora/rpm/com.keygenqt.trex.spec b/examples/games/trex/aurora/rpm/com.keygenqt.trex.spec
+new file mode 100644
+--- /dev/null	(revision 0d83673913254a81de40d49f507b1c01f4bbd1cc)
++++ b/examples/games/trex/aurora/rpm/com.keygenqt.trex.spec	(revision 0d83673913254a81de40d49f507b1c01f4bbd1cc)
+@@ -0,0 +1,31 @@
++%global __provides_exclude_from ^%{_datadir}/%{name}/lib/.*$
++%global __requires_exclude ^lib(dconf|flutter-embedder|maliit-glib|.+_platform_plugin)\\.so.*$
++
++Name: com.keygenqt.trex
++Summary: A clone of the classic browser T-Rex game.
++Version: 0.1.1
++Release: 1
++License: Proprietary
++Source0: %{name}-%{version}.tar.zst
++
++BuildRequires: cmake
++BuildRequires: ninja
++
++%description
++%{summary}.
++
++%prep
++%autosetup
++
++%build
++%cmake -GNinja -DCMAKE_BUILD_TYPE=%{_flutter_build_type} -DPSDK_VERSION=%{_flutter_psdk_version} -DPSDK_MAJOR=%{_flutter_psdk_major}
++%ninja_build
++
++%install
++%ninja_install
++
++%files
++%{_bindir}/%{name}
++%{_datadir}/%{name}/*
++%{_datadir}/applications/%{name}.desktop
++%{_datadir}/icons/hicolor/*/apps/%{name}.png
+Index: examples/games/trex/pubspec.yaml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/examples/games/trex/pubspec.yaml b/examples/games/trex/pubspec.yaml
+--- a/examples/games/trex/pubspec.yaml	(revision 47ba0d8738b101ed59781f8ba384cf05a16d65f1)
++++ b/examples/games/trex/pubspec.yaml	(revision 0d83673913254a81de40d49f507b1c01f4bbd1cc)
+@@ -3,7 +3,7 @@
+ homepage: https://github.com/flame-engine/flame/tree/main/examples/games/trex/
+ publish_to: 'none'
+ 
+-version: 0.1.0
++version: 0.1.1
+ 
+ environment:
+   sdk: ">=3.4.0 <4.0.0"
+diff --git a/examples/games/trex/aurora/icons/108x108.png b/examples/games/trex/aurora/icons/108x108.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..847cd870037bf5aa58b5f176efee2312ad9f065a
+GIT binary patch
+literal 5089
+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
+
+diff --git a/examples/games/trex/aurora/icons/128x128.png b/examples/games/trex/aurora/icons/128x128.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..7c1561d0f0aaa5a8bf4f11d356ac67b5905a4300
+GIT binary patch
+literal 5150
+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
+
+diff --git a/examples/games/trex/aurora/icons/172x172.png b/examples/games/trex/aurora/icons/172x172.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..48fe97a43e590b5cdd511f4adbf1dba9c9354735
+GIT binary patch
+literal 5263
+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
+An*aa+
+
+diff --git a/examples/games/trex/aurora/icons/86x86.png b/examples/games/trex/aurora/icons/86x86.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..d8a2c5fdf3c1300e8bc2c393566b382971e66c9b
+GIT binary patch
+literal 5031
+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
+RRQ&tHm^9U}Yhu>i{{Ua$8?OKW
+

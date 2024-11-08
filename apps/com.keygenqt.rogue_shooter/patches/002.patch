@@ -1,0 +1,36 @@
+Subject: [PATCH] 002
+---
+Index: examples/games/rogue_shooter/aurora/rpm/com.keygenqt.rogue_shooter.spec
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/examples/games/rogue_shooter/aurora/rpm/com.keygenqt.rogue_shooter.spec b/examples/games/rogue_shooter/aurora/rpm/com.keygenqt.rogue_shooter.spec
+--- a/examples/games/rogue_shooter/aurora/rpm/com.keygenqt.rogue_shooter.spec	(revision e1c4a4aac1e449c8ad9bc01dcd226cfebc205623)
++++ b/examples/games/rogue_shooter/aurora/rpm/com.keygenqt.rogue_shooter.spec	(revision f2b55e8ec22ff8fdffec0bd141b648ab38cfb8d9)
+@@ -3,7 +3,7 @@
+ 
+ Name: com.keygenqt.rogue_shooter
+ Summary: This is a simple scrolling shooter game which we use for testing the performance of Flame.
+-Version: 0.1.0
++Version: 0.1.1
+ Release: 1
+ License: Proprietary
+ Source0: %{name}-%{version}.tar.zst
+Index: examples/games/rogue_shooter/pubspec.yaml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/examples/games/rogue_shooter/pubspec.yaml b/examples/games/rogue_shooter/pubspec.yaml
+--- a/examples/games/rogue_shooter/pubspec.yaml	(revision e1c4a4aac1e449c8ad9bc01dcd226cfebc205623)
++++ b/examples/games/rogue_shooter/pubspec.yaml	(revision f2b55e8ec22ff8fdffec0bd141b648ab38cfb8d9)
+@@ -3,7 +3,7 @@
+ homepage: https://github.com/flame-engine/flame/tree/main/examples/games/rogue_shooter
+ publish_to: 'none'
+ 
+-version: 0.1.0
++version: 0.1.1
+ 
+ environment:
+   sdk: ">=3.4.0 <4.0.0"

@@ -1,23 +1,3 @@
-# Aurora Apps
+The repository is intended for assembling open source projects and their specification for the Aurora CLI application. Here you can find scripts that assemble projects, patches for projects and their releases in the form of rpm packages for the Aurora operating system. You can install applications through the Aurora CLI console utility or the Aurora Toolbox graphical application.
 
-### Subscribe and like!
-
-[![More](https://github.com/keygenqt/aurora-apps/blob/main/docs/assets/images/more.png?raw=true)](https://keygenqt.github.io/aurora-apps/)
-
-### License
-
-```
-Copyright 2024 Vitaliy Zarubin
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-```
+You can find all the assembly scripts and patches in this repository.
