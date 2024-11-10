@@ -26,6 +26,12 @@ else
     cd $PROJECT
 fi
 
+# Apply patches
+for entry in "$DIR/patches"/*
+do
+    git apply $(realpath "$entry")
+done
+
 $chroot mb2 --target $target_arm build
 $chroot mb2 --target $target_arm64 build
 $chroot mb2 --target $target_x64 build

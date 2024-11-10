@@ -1,0 +1,19 @@
+Subject: [PATCH] Fix link
+---
+Index: qml/pages/MainPage.qml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/qml/pages/MainPage.qml b/qml/pages/MainPage.qml
+--- a/qml/pages/MainPage.qml	(revision f002afbd4f9d5105b9c6f58409efc8975a2ba4dd)
++++ b/qml/pages/MainPage.qml	(revision e88c7ae96fc043ea231b0cd3d503d5776db1d343)
+@@ -26,7 +26,7 @@
+         id: webView
+         objectName: "webView"
+ 
+-        property string _initUrl: "http://www.youtube.com"
++        property string _initUrl: "https://rutube.ru/channel/31474804/"
+ 
+         anchors {
+             top: parent.top
