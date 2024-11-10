@@ -6,6 +6,7 @@ dart=$(echo $flutter | sed 's/bin\/flutter/bin\/dart/g')
 
 # Set projects dir
 DIR="$(dirname "$(realpath "$0")")"
+cd $DIR
 mkdir -p ../../projects
 cd ../../projects
 

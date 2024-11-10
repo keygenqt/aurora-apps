@@ -10,6 +10,7 @@ target_x64=$(aurora-cli api --route="/psdk/targets?version=$version" | grep -E '
 
 # Set projects dir
 DIR="$(dirname "$(realpath "$0")")"
+cd $DIR
 mkdir -p ../../projects
 cd ../../projects
 

@@ -5,6 +5,7 @@ flutter=$(aurora-cli api --route='/flutter/installed' | grep '/bin/' | head -n 1
 
 # Set projects dir
 DIR="$(dirname "$(realpath "$0")")"
+cd $DIR
 mkdir -p ../../projects
 cd ../../projects
 
