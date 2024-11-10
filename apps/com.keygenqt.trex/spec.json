@@ -2,6 +2,7 @@
     "name": "Trex",
     "icon": "https://github.com/keygenqt/aurora-apps/blob/main/apps/com.keygenqt.trex/data/172x172.png?raw=true",
     "desc": "A clone of the classic browser T-Rex game.",
+    "desc_ru": "Клон классической браузерной игры T-Rex.",
     "repo": "https://github.com/flame-engine/flame/tree/main/examples/games/trex",
     "type": "flutter"
 }

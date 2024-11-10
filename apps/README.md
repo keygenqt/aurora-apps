@@ -35,6 +35,7 @@ Example:
     "name": "Rogue Shooter",
     "icon": "https://github.com/keygenqt/aurora-apps/blob/main/apps/com.keygenqt.rogue_shooter/data/172x172.png?raw=true",
     "desc": "This is a simple scrolling shooter game which we use for testing the performance of Flame.",
+    "desc_ru": "Это простая игра-шутер с прокруткой, которую мы используем для тестирования производительности Flame.",
     "repo": "https://github.com/flame-engine/flame/tree/main/examples/games/rogue_shooter",
     "type": "flutter"
 }
