@@ -1,0 +1,8 @@
+{
+    "name": "Dev Portal Web",
+    "icon": "https://github.com/keygenqt/aurora-apps/blob/main/apps/ru.auroraos.DevPortalWeb/data/172x172.png?raw=true",
+    "desc": "The application demonstrates how webview works in Aurora OS.",
+    "desc_ru": "Приложение демонстрирует работу webview в ОС Аврора.",
+    "repo": "https://gitlab.com/omprussia/examples/DevPortalWeb",
+    "type": "qt"
+}

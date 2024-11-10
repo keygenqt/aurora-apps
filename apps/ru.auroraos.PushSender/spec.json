@@ -1,0 +1,8 @@
+{
+    "name": "Push Sender",
+    "icon": "https://github.com/keygenqt/aurora-apps/blob/main/apps/ru.auroraos.PushSender/data/172x172.png?raw=true",
+    "desc": "The app provides a user interface for sending push notifications via Aurora Center.",
+    "desc_ru": "Приложение предоставляет интерфейс пользователя для отправки push-уведомлений через Аврора Центр.",
+    "repo": "https://gitlab.com/omprussia/examples/PushSender",
+    "type": "qt"
+}

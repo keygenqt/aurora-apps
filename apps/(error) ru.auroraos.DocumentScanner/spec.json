@@ -1,0 +1,8 @@
+{
+    "name": "Document Scanner",
+    "icon": "https://github.com/keygenqt/aurora-apps/blob/main/apps/ru.auroraos.DocumentScanner/data/172x172.png?raw=true",
+    "desc": "The project provides an example of using video filters to finding documents.",
+    "desc_ru": "Проект предоставляет пример использования видео фильтров для поиска документов.",
+    "repo": "https://gitlab.com/omprussia/examples/DocumentScanner",
+    "type": "qt"
+}

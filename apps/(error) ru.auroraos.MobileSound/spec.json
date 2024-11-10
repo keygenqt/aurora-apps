@@ -1,0 +1,8 @@
+{
+    "name": "Mobile Sound",
+    "icon": "https://github.com/keygenqt/aurora-apps/blob/main/apps/ru.auroraos.MobileSound/data/172x172.png?raw=true",
+    "desc": "The application to demonstrate working with audio in Aurora OS.",
+    "desc_ru": "Приложение для демонстрации работы с аудио в ОС Аврора.",
+    "repo": "https://gitlab.com/omprussia/examples/MobileSound",
+    "type": "qt"
+}

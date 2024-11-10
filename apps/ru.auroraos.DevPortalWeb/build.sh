@@ -14,8 +14,8 @@ cd $DIR
 mkdir -p ../../projects
 cd ../../projects
 
-APP_ID='ru.auroraos.WebTodoList'
-PROJECT='WebTodoList'
+APP_ID='ru.auroraos.DevPortalWeb'
+PROJECT='DevPortalWeb'
 
 # Clone project
 if [ -d "$PROJECT" ]; then
@@ -23,17 +23,9 @@ if [ -d "$PROJECT" ]; then
     git clean -fdx
     git pull
 else
-    git clone https://gitlab.com/omprussia/examples/WebTodoList.git
+    git clone https://gitlab.com/omprussia/examples/DevPortalWeb.git
     cd $PROJECT
 fi
-
-# Rebuild react app
-cd react-app
-npm update
-npm run build
-rm -rf qml/react
-mv build qml/react
-cd ../
 
 $chroot mb2 --target $target_arm build
 $chroot mb2 --target $target_arm64 build

@@ -1,0 +1,8 @@
+{
+    "name": "OFVPN Plugin and Client",
+    "icon": "https://github.com/keygenqt/aurora-apps/blob/main/apps/ru.auroraos.OFVPN/data/172x172.png?raw=true",
+    "desc": "An example project that shows how to integrate VPN into Aurora OS which is provided by openfortivpn application.",
+    "desc_ru": "Проект-пример, показывающий как интегрировать VPN в Аврору ОС, который предоставляется приложением openfortivpn.",
+    "repo": "https://gitlab.com/omprussia/examples/ofvpn",
+    "type": "qt"
+}

@@ -1,0 +1,8 @@
+{
+    "name": "OpenVPN Plugin",
+    "icon": "https://github.com/keygenqt/aurora-apps/blob/main/apps/ru.auroraos.OpenVPNPlugin/data/172x172.png?raw=true",
+    "desc": "A sample project showing how to integrate a VPN into Aurora OS, adding the ability to connect through the connman plugin using OpenVPN.",
+    "desc_ru": "Проект-пример, показывающий как интегрировать VPN в Аврору ОС, добавив возможность подключаться через плагин connman, используя OpenVPN.",
+    "repo": "https://gitlab.com/omprussia/examples/OpenVpnPlugin",
+    "type": "qt"
+}

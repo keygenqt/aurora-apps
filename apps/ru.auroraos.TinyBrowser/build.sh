@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Get flutter
+# Get psdk
 chroot=$(aurora-cli api --route='/psdk/installed' | grep 'aurora_psdk/sdk-chroot' | head -n 1 | xargs | sed 's/,//g')
 version=$($chroot version | tail -1 | awk -F' ' '{print $2}')
 

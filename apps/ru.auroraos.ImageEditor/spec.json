@@ -1,0 +1,8 @@
+{
+    "name": "Image Editor",
+    "icon": "https://github.com/keygenqt/aurora-apps/blob/main/apps/ru.auroraos.ImageEditor/data/172x172.png?raw=true",
+    "desc": "The full featured image editor for Aurora OS.",
+    "desc_ru": "Полнофункциональный редактор изображений для ОС Аврора.",
+    "repo": "https://gitlab.com/omprussia/examples/ImageEditor",
+    "type": "qt"
+}

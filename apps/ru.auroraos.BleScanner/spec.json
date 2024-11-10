@@ -1,0 +1,8 @@
+{
+    "name": "BLE Scanner",
+    "icon": "https://github.com/keygenqt/aurora-apps/blob/main/apps/ru.auroraos.BleScanner/data/172x172.png?raw=true",
+    "desc": "The project provides an example of using SimpleBLE library for scanning BLE devices.",
+    "desc_ru": "В проекте представлен пример использования библиотеки SimpleBLE для сканирования устройств BLE.",
+    "repo": "https://gitlab.com/omprussia/examples/BleScanner",
+    "type": "qt"
+}

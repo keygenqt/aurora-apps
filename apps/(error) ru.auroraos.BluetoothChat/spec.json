@@ -1,0 +1,8 @@
+{
+    "name": "Bluetooth Chat",
+    "icon": "https://github.com/keygenqt/aurora-apps/blob/main/apps/ru.auroraos.BluetoothChat/data/172x172.png?raw=true",
+    "desc": "The application demonstrates creating a Bluetooth chat profile, launching your Gatt server, and scanning nearby devices.",
+    "desc_ru": "Приложение демонстрирует создание профиля чата Bluetooth, запуск вашего сервера Gatt и сканирование близлежащих устройств.",
+    "repo": "https://gitlab.com/omprussia/examples/BluetoothChat",
+    "type": "qt"
+}

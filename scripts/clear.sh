@@ -6,7 +6,7 @@ DIR="$(dirname "$(realpath "$0")")"
 for entry in $DIR/../apps/*
 do
     if [[ -d $entry ]]; then
-        rm -rf $entry/builds
+        rm -rf "$entry/builds"
     fi
 done
 
