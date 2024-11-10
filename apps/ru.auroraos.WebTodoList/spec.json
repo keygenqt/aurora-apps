@@ -1,0 +1,7 @@
+{
+    "name": "Web TodoList",
+    "icon": "https://github.com/keygenqt/aurora-apps/blob/main/apps/ru.auroraos.WebTodoList/data/172x172.png?raw=true",
+    "desc": "Example is to demonstrate the work of the WebView framework with an application written in React and interactions between them through the event system.",
+    "repo": "https://gitlab.com/omprussia/examples/WebTodoList",
+    "type": "pwa"
+}
