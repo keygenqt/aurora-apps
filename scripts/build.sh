@@ -10,7 +10,6 @@ do
     if [[ $entry != *"(error)"* ]]; then
         bash $entry
     fi
-
 done
 
 bash $DIR/validate.sh
