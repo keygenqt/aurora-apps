@@ -14,7 +14,7 @@ cd $DIR
 mkdir -p ../../projects
 cd ../../projects
 
-PROJECT='BleScanner'
+PROJECT='WebRtc'
 
 # Clone project
 if [ -d "$PROJECT" ]; then
@@ -22,7 +22,7 @@ if [ -d "$PROJECT" ]; then
     git clean -fdx
     git pull
 else
-    git clone https://gitlab.com/omprussia/examples/BleScanner.git
+    git clone https://gitlab.com/omprussia/examples/WebRtc.git
     cd $PROJECT
 fi
 
