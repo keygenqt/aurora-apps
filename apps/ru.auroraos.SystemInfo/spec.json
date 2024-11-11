@@ -1,0 +1,8 @@
+{
+    "name": "System Info",
+    "icon": "https://github.com/keygenqt/aurora-apps/blob/main/apps/ru.auroraos.SystemInfo/data/172x172.png?raw=true",
+    "desc": "The project contains the usage examples of the API that provides information about the execution environment: the OS and the device.",
+    "desc_ru": "Проект содержит примеры использования API, который предоставляет информацию о среде выполнения: ОС и устройстве.",
+    "repo": "https://gitlab.com/omprussia/examples/SystemInfo",
+    "type": "qt"
+}

@@ -1,0 +1,9 @@
+Emulator 5.1.1.60
+
+[defaultuser@AuroraEmul ~]$ invoker --type=qt5 ru.auroraos.BluetoothChat
+invoker: warning: enforcing sandboxing for '/usr/bin/ru.auroraos.BluetoothChat'
+Warning: "shell none" command in the profile file is done by default; the command will be deprecated
+constructing /run/firejail/mnt/privileged:  ...
+mounting /run/firejail/mnt/privileged @ /home/defaultuser/.local/share/system/privileged
+hiding /run/firejail/mnt/privileged
+invoker: warning: application (pid=-1) exit(139) signal(0)

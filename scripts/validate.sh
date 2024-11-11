@@ -21,6 +21,7 @@ do
     if [[ -d $entry ]] && [[ ${entry} != *"(error)"* ]]; then
         count=$(ls $entry/builds/* 2> /dev/null | wc -l)
         if [[ $count -ne 3 ]]; then
+            echo ""
             echo "Error count RPM packages: $count: \"$entry\"!"
             is_error=true
         else

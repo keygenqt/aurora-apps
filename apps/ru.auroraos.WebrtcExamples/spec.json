@@ -1,0 +1,8 @@
+{
+    "name": "Web RTC",
+    "icon": "https://github.com/keygenqt/aurora-apps/blob/main/apps/ru.auroraos.WebrtcExamples/data/172x172.png?raw=true",
+    "desc": "Application in C++ demonstrates WebRTC audio/video call.",
+    "desc_ru": "Приложение на C++ демонстрирует аудио/видеовызовы WebRTC.",
+    "repo": "https://gitlab.com/omprussia/examples/WebRtc",
+    "type": "qt"
+}

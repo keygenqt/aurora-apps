@@ -14,8 +14,7 @@ cd $DIR
 mkdir -p ../../projects
 cd ../../projects
 
-APP_ID='ru.auroraos.DocumentScanner'
-PROJECT='DocumentScanner'
+PROJECT='RdpClient'
 
 # Clone project
 if [ -d "$PROJECT" ]; then
@@ -23,19 +22,22 @@ if [ -d "$PROJECT" ]; then
     git clean -fdx
     git pull
 else
-    git clone https://gitlab.com/omprussia/examples/DocumentScanner.git
+    git clone https://gitlab.com/omprussia/examples/RdpClient.git
     cd $PROJECT
 fi
 
-$chroot mb2 --target $target_arm build
-$chroot mb2 --target $target_arm64 build
-$chroot mb2 --target $target_x64 build
-
-# Move
+# Folder builds
 rm -rf $DIR/builds
 mkdir $DIR/builds
-for entry in ./RPMS/*
-do
-    rpm=$(realpath "$entry")
-    mv $rpm $DIR/builds
-done
+
+# Build arm
+$chroot mb2 --target $target_arm build
+mv ./RPMS/* $DIR/builds && git clean -fdx
+
+# Build arm64
+$chroot mb2 --target $target_arm64 build
+mv ./RPMS/* $DIR/builds && git clean -fdx
+
+# Build x64
+$chroot mb2 --target $target_x64 build
+mv ./RPMS/* $DIR/builds && git clean -fdx

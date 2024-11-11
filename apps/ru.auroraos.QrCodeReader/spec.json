@@ -1,0 +1,8 @@
+{
+    "name": "QR Code Reader",
+    "icon": "https://github.com/keygenqt/aurora-apps/blob/main/apps/ru.auroraos.QrCodeReader/data/172x172.png?raw=true",
+    "desc": "The project provides an example of using video filters to process QR codes.",
+    "desc_ru": "В проекте приведен пример использования видеофильтров для обработки QR-кодов.",
+    "repo": "https://gitlab.com/omprussia/examples/QrCodeReader",
+    "type": "qt"
+}

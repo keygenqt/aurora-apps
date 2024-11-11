@@ -10,7 +10,6 @@ cd $DIR
 mkdir -p ../../projects
 cd ../../projects
 
-APP_ID='com.queenstech.todo'
 PROJECT='fluttery-todo'
 
 # Clone project

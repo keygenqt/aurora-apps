@@ -9,7 +9,6 @@ cd $DIR
 mkdir -p ../../projects
 cd ../../projects
 
-APP_ID='com.keygenqt.rogue_shooter'
 PROJECT='flame'
 
 # Clone project

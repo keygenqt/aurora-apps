@@ -9,7 +9,6 @@ cd $DIR
 mkdir -p ../../projects
 cd ../../projects
 
-APP_ID='com.keygenqt.trex'
 PROJECT='flame'
 
 # Clone project
