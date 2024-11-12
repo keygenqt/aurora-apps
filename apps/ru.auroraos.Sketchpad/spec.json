@@ -4,5 +4,5 @@
     "desc": "The project is an example of using Canvas to draw on the screen.",
     "desc_ru": "Проект представляет собой пример использования Canvas для рисования на экране.",
     "repo": "https://gitlab.com/omprussia/examples/SketchPad",
-    "group": ["qt", "example"]
+    "groups": ["qt", "example"]
 }

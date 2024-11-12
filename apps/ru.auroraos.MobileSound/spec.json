@@ -4,5 +4,5 @@
     "desc": "The application to demonstrate working with audio in Aurora OS.",
     "desc_ru": "Приложение для демонстрации работы с аудио в ОС Аврора.",
     "repo": "https://gitlab.com/omprussia/examples/MobileSound",
-    "group": ["qt", "example"]
+    "groups": ["qt", "example"]
 }

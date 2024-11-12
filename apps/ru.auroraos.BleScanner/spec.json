@@ -4,5 +4,5 @@
     "desc": "The project provides an example of using SimpleBLE library for scanning BLE devices.",
     "desc_ru": "В проекте представлен пример использования библиотеки SimpleBLE для сканирования устройств BLE.",
     "repo": "https://gitlab.com/omprussia/examples/BleScanner",
-    "group": ["qt", "example"]
+    "groups": ["qt", "example"]
 }

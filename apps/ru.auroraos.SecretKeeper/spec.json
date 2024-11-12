@@ -4,5 +4,5 @@
     "desc": "The project provides an example of using crypto-containers via SStore API and QML models to manage sensitive data.",
     "desc_ru": "Проект предоставляет пример использования криптоконтейнеров через SStore API и QML модели для управления чувствительными данными.",
     "repo": "https://gitlab.com/omprussia/examples/SecretKeeper",
-    "group": ["qt", "example"]
+    "groups": ["qt", "example"]
 }

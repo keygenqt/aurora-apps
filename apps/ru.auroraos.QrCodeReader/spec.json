@@ -4,5 +4,5 @@
     "desc": "The project provides an example of using video filters to process QR codes.",
     "desc_ru": "В проекте приведен пример использования видеофильтров для обработки QR-кодов.",
     "repo": "https://gitlab.com/omprussia/examples/QrCodeReader",
-    "group": ["qt", "example"]
+    "groups": ["qt", "example"]
 }

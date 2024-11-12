@@ -4,5 +4,5 @@
     "desc": "A minimal Todo mobile app made using Flutter.",
     "desc_ru": "Минималистичное мобильное приложение Todo, созданное с использованием Flutter.",
     "repo": "https://gitlab.com/omprussia/flutter/fluttery-todo",
-    "group": ["flutter", "example"]
+    "groups": ["flutter", "example"]
 }

@@ -4,5 +4,5 @@
     "desc": "Application in C++ demonstrates WebRTC audio/video call.",
     "desc_ru": "Приложение на C++ демонстрирует аудио/видеовызовы WebRTC.",
     "repo": "https://gitlab.com/omprussia/examples/WebRtc",
-    "group": ["qt", "example"]
+    "groups": ["qt", "example"]
 }
