@@ -1,6 +1,6 @@
 {
     "name": "Document Scanner",
-    "icon": "https://github.com/keygenqt/aurora-apps/blob/main/apps/ru.auroraos.DocumentScanner/data/172x172.png?raw=true",
+    "icon": "https://gitlab.com/omprussia/examples/DocumentScanner/-/raw/example/app/icons/172x172/ru.auroraos.DocumentScanner.png?ref_type=heads",
     "desc": "The project provides an example of using video filters to finding documents.",
     "desc_ru": "Проект предоставляет пример использования видео фильтров для поиска документов.",
     "repo": "https://gitlab.com/omprussia/examples/DocumentScanner",

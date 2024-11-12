@@ -1,6 +1,6 @@
 {
     "name": "Fluttery ToDo",
-    "icon": "https://github.com/keygenqt/aurora-apps/blob/main/apps/com.queenstech.todo/data/172x172.png?raw=true",
+    "icon": "https://gitlab.com/omprussia/flutter/fluttery-todo/-/raw/master/aurora/icons/172x172.png?ref_type=heads",
     "desc": "A minimal Todo mobile app made using Flutter.",
     "desc_ru": "Минималистичное мобильное приложение Todo, созданное с использованием Flutter.",
     "repo": "https://gitlab.com/omprussia/flutter/fluttery-todo",

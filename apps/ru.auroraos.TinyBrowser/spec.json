@@ -1,6 +1,6 @@
 {
     "name": "Tiny Browser",
-    "icon": "https://github.com/keygenqt/aurora-apps/blob/main/apps/ru.auroraos.TinyBrowser/data/172x172.png?raw=true",
+    "icon": "https://gitlab.com/omprussia/examples/TinyBrowser/-/raw/example/icons/172x172/ru.auroraos.TinyBrowser.png?ref_type=heads",
     "desc": "The project provides an example of using WebView.",
     "desc_ru": "Проект представляет собой пример использования WebView.",
     "repo": "https://gitlab.com/omprussia/examples/TinyBrowser",

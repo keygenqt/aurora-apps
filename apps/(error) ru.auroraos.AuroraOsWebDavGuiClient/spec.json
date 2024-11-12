@@ -1,6 +1,6 @@
 {
     "name": "WebDav Client",
-    "icon": "https://github.com/keygenqt/aurora-apps/blob/main/apps/ru.auroraos.AuroraOsWebDavGuiClient/data/172x172.png?raw=true",
+    "icon": "https://gitlab.com/omprussia/examples/WebDavClient/-/raw/example/app/icons/172x172/ru.auroraos.AuroraOsWebDavGuiClient.png?ref_type=heads",
     "desc": "The application with the graphical user interface that allows to interact with remote WebDAV server.",
     "desc_ru": "Приложение с графическим пользовательским интерфейсом, которое позволяет взаимодействовать с удалённым WebDav сервером.",
     "repo": "https://gitlab.com/omprussia/examples/WebDavClient",

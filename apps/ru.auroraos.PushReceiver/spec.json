@@ -1,6 +1,6 @@
 {
     "name": "Push Receiver",
-    "icon": "https://github.com/keygenqt/aurora-apps/blob/main/apps/ru.auroraos.PushReceiver/data/172x172.png?raw=true",
+    "icon": "https://gitlab.com/omprussia/examples/PushReceiver/-/raw/example/icons/172x172/ru.auroraos.PushReceiver.png?ref_type=heads",
     "desc": "The application allows you to receive and process push notifications.",
     "desc_ru": "Приложение позволяет принимать и обрабатывать push-уведомления.",
     "repo": "https://gitlab.com/omprussia/examples/PushReceiver",

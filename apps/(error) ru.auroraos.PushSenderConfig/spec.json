@@ -1,6 +1,6 @@
 {
     "name": "Push Sender Config",
-    "icon": "https://github.com/keygenqt/aurora-apps/blob/main/apps/ru.auroraos.PushSenderConfig/data/172x172.png?raw=true",
+    "icon": "https://gitlab.com/omprussia/examples/PushSenderConfig/-/raw/example/icons/172x172/ru.auroraos.PushSenderConfig.png?ref_type=heads",
     "desc": "The project provides a QML-only applications.",
     "desc_ru": "Проект предоставляет приложение, использующее только QML.",
     "repo": "https://gitlab.com/omprussia/examples/PushSenderConfig",

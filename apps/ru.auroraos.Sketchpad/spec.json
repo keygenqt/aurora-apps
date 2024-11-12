@@ -1,6 +1,6 @@
 {
     "name": "Sketchpad",
-    "icon": "https://github.com/keygenqt/aurora-apps/blob/main/apps/ru.auroraos.Sketchpad/data/172x172.png?raw=true",
+    "icon": "https://gitlab.com/omprussia/examples/SketchPad/-/raw/example/icons/172x172/ru.auroraos.Sketchpad.png?ref_type=heads",
     "desc": "The project is an example of using Canvas to draw on the screen.",
     "desc_ru": "Проект представляет собой пример использования Canvas для рисования на экране.",
     "repo": "https://gitlab.com/omprussia/examples/SketchPad",

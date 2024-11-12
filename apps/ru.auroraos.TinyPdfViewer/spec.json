@@ -1,6 +1,6 @@
 {
     "name": "Tiny PDF Viewer",
-    "icon": "https://github.com/keygenqt/aurora-apps/blob/main/apps/ru.auroraos.TinyPdfViewer/data/172x172.png?raw=true",
+    "icon": "https://gitlab.com/omprussia/examples/TinyPdfViewer/-/raw/example/icons/172x172/ru.auroraos.TinyPdfViewer.png?ref_type=heads",
     "desc": "The project provides an example of a PDF viewer based on PDFium.",
     "desc_ru": "Проект предоставляет пример программы для просмотра PDF-документов на основе PDFium.",
     "repo": "https://gitlab.com/omprussia/examples/TinyPdfViewer",

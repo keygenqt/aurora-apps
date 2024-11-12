@@ -1,6 +1,6 @@
 {
     "name": "RDP Client",
-    "icon": "https://github.com/keygenqt/aurora-apps/blob/main/apps/ru.auroraos.RemoteDesktopClient/data/172x172.png?raw=true",
+    "icon": "https://gitlab.com/omprussia/examples/RdpClient/-/raw/example/app/icons/172x172/ru.auroraos.RemoteDesktopClient.png?ref_type=heads",
     "desc": "Remote desktop client application that allows to access to remote desktop via RDP and VNC protocols.",
     "desc_ru": "Приложение-клиент, позволяющее получить доступ к удаленному рабочему столу по протоколам RDP и VNC.",
     "repo": "https://gitlab.com/omprussia/examples/RdpClient",

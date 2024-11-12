@@ -1,6 +1,6 @@
 {
     "name": "Mobile Print",
-    "icon": "https://github.com/keygenqt/aurora-apps/blob/main/apps/ru.auroraos.MobilePrint/data/172x172.png?raw=true",
+    "icon": "https://gitlab.com/omprussia/examples/MobilePrint/-/raw/example/icons/172x172/ru.auroraos.MobilePrint.png?ref_type=heads",
     "desc": "The project demonstrates an example of working with the PrintAPI.",
     "desc_ru": "Проект демонстрирует пример работы с PrintAPI.",
     "repo": "https://gitlab.com/omprussia/examples/MobilePrint",
