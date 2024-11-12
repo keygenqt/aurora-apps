@@ -4,5 +4,5 @@
     "desc": "The application demonstrates creating a Bluetooth chat profile, launching your Gatt server, and scanning nearby devices.",
     "desc_ru": "Приложение демонстрирует создание профиля чата Bluetooth, запуск вашего сервера Gatt и сканирование близлежащих устройств.",
     "repo": "https://gitlab.com/omprussia/examples/BluetoothChat",
-    "type": "qt"
+    "group": ["qt", "example"]
 }

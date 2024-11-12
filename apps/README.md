@@ -37,7 +37,7 @@ Example:
     "desc": "This is a simple scrolling shooter game which we use for testing the performance of Flame.",
     "desc_ru": "Это простая игра-шутер с прокруткой, которую мы используем для тестирования производительности Flame.",
     "repo": "https://github.com/flame-engine/flame/tree/main/examples/games/rogue_shooter",
-    "type": "flutter"
+    "group": ["flutter", "game"]
 }
 ```
 
@@ -47,3 +47,6 @@ Types:
 - `kmp` - Projects written using Kotlin Multiplatform.
 - `pwa` - Projects written using WebView, etc.
 - `qt` - Projects written in Qt.
+- `example` - Functional applications that demonstrate approaches to development.
+- `demo` - Projects that demonstrate the use of technology.
+- `game` - Just demo games.

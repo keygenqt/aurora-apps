@@ -4,5 +4,5 @@
     "desc": "The application allows you to receive and process push notifications.",
     "desc_ru": "Приложение позволяет принимать и обрабатывать push-уведомления.",
     "repo": "https://gitlab.com/omprussia/examples/PushReceiver",
-    "type": "qt"
+    "group": ["qt", "example"]
 }

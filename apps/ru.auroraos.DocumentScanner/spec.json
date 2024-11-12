@@ -4,5 +4,5 @@
     "desc": "The project provides an example of using video filters to finding documents.",
     "desc_ru": "Проект предоставляет пример использования видео фильтров для поиска документов.",
     "repo": "https://gitlab.com/omprussia/examples/DocumentScanner",
-    "type": "qt"
+    "group": ["qt", "example"]
 }

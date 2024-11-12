@@ -4,5 +4,5 @@
     "desc": "The full featured image editor for Aurora OS.",
     "desc_ru": "Полнофункциональный редактор изображений для ОС Аврора.",
     "repo": "https://gitlab.com/omprussia/examples/ImageEditor",
-    "type": "qt"
+    "group": ["qt", "example"]
 }

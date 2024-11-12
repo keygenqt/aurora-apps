@@ -4,5 +4,5 @@
     "desc": "Example is to demonstrate the work of the WebView framework with an application written in React and interactions between them through the event system.",
     "desc_ru": "Пример демонстрирует работу WebView с приложением, написанным на React, и взаимодействие React с операционной системой.",
     "repo": "https://gitlab.com/omprussia/examples/WebTodoList",
-    "type": "pwa"
+    "group": ["qt", "pwa", "example"]
 }

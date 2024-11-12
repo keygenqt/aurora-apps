@@ -4,5 +4,5 @@
     "desc": "An example project that shows how to integrate VPN into Aurora OS which is provided by openfortivpn application.",
     "desc_ru": "Проект-пример, показывающий как интегрировать VPN в Аврору ОС, который предоставляется приложением openfortivpn.",
     "repo": "https://gitlab.com/omprussia/examples/ofvpn",
-    "type": "qt"
+    "group": ["qt", "example"]
 }

@@ -4,5 +4,5 @@
     "desc": "The project provides an example of using WebView.",
     "desc_ru": "Проект представляет собой пример использования WebView.",
     "repo": "https://gitlab.com/omprussia/examples/TinyBrowser",
-    "type": "qt"
+    "group": ["qt", "example"]
 }

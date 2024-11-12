@@ -4,5 +4,5 @@
     "desc": "Remote desktop client application that allows to access to remote desktop via RDP and VNC protocols.",
     "desc_ru": "Приложение-клиент, позволяющее получить доступ к удаленному рабочему столу по протоколам RDP и VNC.",
     "repo": "https://gitlab.com/omprussia/examples/RdpClient",
-    "type": "qt"
+    "group": ["qt", "example"]
 }

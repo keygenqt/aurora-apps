@@ -4,5 +4,5 @@
     "desc": "The app provides a user interface for sending push notifications via Aurora Center.",
     "desc_ru": "Приложение предоставляет интерфейс пользователя для отправки push-уведомлений через Аврора Центр.",
     "repo": "https://gitlab.com/omprussia/examples/PushSender",
-    "type": "qt"
+    "group": ["qt", "example"]
 }

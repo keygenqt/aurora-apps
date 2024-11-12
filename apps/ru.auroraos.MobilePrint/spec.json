@@ -4,5 +4,5 @@
     "desc": "The project demonstrates an example of working with the PrintAPI.",
     "desc_ru": "Проект демонстрирует пример работы с PrintAPI.",
     "repo": "https://gitlab.com/omprussia/examples/MobilePrint",
-    "type": "qt"
+    "group": ["qt", "example"]
 }
