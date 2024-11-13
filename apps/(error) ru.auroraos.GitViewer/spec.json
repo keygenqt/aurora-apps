@@ -1,0 +1,8 @@
+{
+    "name": "Git Viewer",
+    "icon": "https://gitlab.com/omprussia/kmp/gitviewer/-/raw/master/auroraApp/GitViewer/icons/172x172/ru.auroraos.GitViewer.png?ref_type=heads",
+    "desc": "Kotlin Multiplatform application demonstrating the work of the common KMP module on 3 platforms: Android, Web, Aurora OS.",
+    "desc_ru": "Kotlin Multiplatform приложение демонстрирующее работу общего модуля KMP на 3 платформах: Android, Web, Aurora OS.",
+    "repo": "https://gitlab.com/omprussia/kmp/gitviewer",
+    "groups": ["kmp", "example"]
+}

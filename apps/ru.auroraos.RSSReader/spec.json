@@ -1,0 +1,8 @@
+{
+    "name": "KMM RSS Reader",
+    "icon": "https://gitlab.com/omprussia/kmp/kmm-rss-reader/-/raw/master/auroraApp/RSSReader/icons/172x172/ru.auroraos.RSSReader.png?ref_type=heads",
+    "desc": "This is an open-source, mobile, cross-platform application built with Kotlin Multiplatform Mobile.",
+    "desc_ru": "Это мобильное кроссплатформенное приложение с открытым исходным кодом, созданное с помощью Kotlin Multiplatform Mobile.",
+    "repo": "https://gitlab.com/omprussia/kmp/kmm-rss-reader",
+    "groups": ["kmp", "example"]
+}
