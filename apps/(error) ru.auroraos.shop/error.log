@@ -1,0 +1,5 @@
+(ERROR) [qml(org.kde.lottie)] Provides: qml(org.kde.lottie) is not allowed in RPM
+(ERROR) [/usr/bin] Direct package ownership of /usr/bin is disallowed
+(WARNING) [/usr/share/ru.auroraos.shop/translations] Empty directory (can be omitted during package installation)
+
+Error: GDBus.Error:ru.omp.APM.Error.BadPackageContent: The package did not pass content validation

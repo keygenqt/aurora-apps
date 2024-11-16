@@ -14,7 +14,7 @@ cd $DIR
 mkdir -p ../../projects
 cd ../../projects
 
-PROJECT='kmm-rss-reader/auroraApp/RSSReader'
+PROJECT='kmm-rss-reader'
 
 # Clone project
 if [ -d "$PROJECT" ]; then
@@ -25,6 +25,8 @@ else
     git clone https://gitlab.com/omprussia/kmp/kmm-rss-reader.git
     cd $PROJECT
 fi
+
+cd auroraApp/RSSReader
 
 # Folder builds
 rm -rf $DIR/builds
